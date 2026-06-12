@@ -1,0 +1,1326 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lyndon Kaizer C. Saturio - Systems & AI Portfolio</title>
+  <style>
+    :root {
+      --deep-blue: #1f5f9f;
+      --header-blue: #336699;
+      --light-blue: #d7e3f4;
+      --border: #b7c7d9;
+      --link: #0000cc;
+      --visited: #551a8b;
+      --text: #111111;
+      --page-gray: #dce1e7;
+      --soft-gray: #eef1f5;
+      --panel-gray: #f7f8fa;
+      --card-gray: #fbfcfd;
+      --pale-yellow: #fff9d6;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: auto;
+    }
+
+    body {
+      margin: 0;
+      background: var(--page-gray);
+      color: var(--text);
+      font-family: Arial, Verdana, Tahoma, sans-serif;
+      font-size: 13px;
+      line-height: 1.42;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: underline;
+    }
+
+    a:visited {
+      color: var(--visited);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .page {
+      width: 1040px;
+      max-width: calc(100% - 16px);
+      margin: 8px auto 18px;
+      border: 1px solid #6d8dad;
+      background: var(--soft-gray);
+      box-shadow: 0 2px 0 #c2c9d2;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 7px 10px;
+      background: var(--deep-blue);
+      color: #ffffff;
+      border-bottom: 1px solid #123b65;
+      font-size: 12px;
+    }
+
+    .banner-identity {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .banner-photo {
+      width: 56px;
+      height: 56px;
+      flex: 0 0 auto;
+      border: 1px solid #c7d8ea;
+      background: #ffffff;
+      object-fit: cover;
+      object-position: center;
+      padding: 2px;
+    }
+
+    .site-name {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 22px;
+      font-weight: bold;
+      line-height: 1.1;
+    }
+
+    .top-meta {
+      text-align: right;
+      font-size: 12px;
+      white-space: normal;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      padding: 4px 7px;
+      background: var(--light-blue);
+      border-top: 1px solid #8fb0d0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav a {
+      display: inline-block;
+      margin: 2px 3px 2px 0;
+      padding: 3px 7px;
+      border: 1px solid #8aa7c4;
+      background: #eef4fb;
+      color: var(--link);
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .status-strip {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 8px;
+      background: #e9edf2;
+      border-bottom: 1px solid var(--border);
+      color: #333333;
+      font-size: 12px;
+    }
+
+    .badge-img {
+      width: 88px;
+      height: 31px;
+      border: 1px solid #7d8da1;
+      image-rendering: pixelated;
+      background: #ffffff;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 185px minmax(0, 1fr) 225px;
+      gap: 8px;
+      padding: 8px;
+      align-items: start;
+    }
+
+    .panel {
+      border: 1px solid var(--border);
+      background: var(--panel-gray);
+      margin-bottom: 8px;
+    }
+
+    .panel-title,
+    .section-title {
+      padding: 4px 7px;
+      background: var(--header-blue);
+      color: #ffffff;
+      border-bottom: 1px solid #244e78;
+      font-weight: bold;
+      font-size: 13px;
+    }
+
+    .section-title {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 16px;
+    }
+
+    .panel-body,
+    .section-body {
+      padding: 7px;
+      background: var(--panel-gray);
+    }
+
+    .side-list,
+    .compact-list,
+    .plain-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .side-list li,
+    .compact-list li {
+      padding: 3px 0;
+      border-bottom: 1px dotted #b8c6d6;
+    }
+
+    .side-list li:last-child,
+    .compact-list li:last-child {
+      border-bottom: 0;
+    }
+
+    .plain-list {
+      padding-left: 17px;
+      list-style: square;
+    }
+
+    .plain-list li {
+      margin: 4px 0;
+    }
+
+    .main-section {
+      border: 1px solid var(--border);
+      margin-bottom: 8px;
+      background: var(--panel-gray);
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0 0 6px;
+      color: #123b65;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 22px;
+    }
+
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+    }
+
+    h3 {
+      font-size: 14px;
+    }
+
+    p {
+      margin: 0 0 8px;
+    }
+
+    hr {
+      height: 1px;
+      border: 0;
+      border-top: 1px solid var(--border);
+      margin: 8px 0;
+    }
+
+    .feature-panel {
+      border: 1px solid #c3b36b;
+      background: var(--pale-yellow);
+      margin: 8px 0;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 170px;
+      gap: 10px;
+      align-items: start;
+    }
+
+    .profile-photo-frame,
+    .project-thumb,
+    .logo-tile {
+      border: 1px solid #9aadc2;
+      background: #e6ebf1;
+      padding: 4px;
+    }
+
+    .profile-photo-frame img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      object-position: center 42%;
+      border: 1px solid #7d8da1;
+      background: #ffffff;
+    }
+
+    .media-caption {
+      margin-top: 4px;
+      color: #333333;
+      font-size: 11px;
+      line-height: 1.25;
+      text-align: center;
+    }
+
+    .logo-strip {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 6px;
+      margin: 8px 0;
+    }
+
+    .logo-tile {
+      min-height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-tile img {
+      display: block;
+      width: 100%;
+      height: 54px;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+    }
+
+    .logo-tile img.emerson-mark {
+      object-position: center;
+    }
+
+    .feature-title {
+      padding: 4px 7px;
+      background: #f1e6a6;
+      border-bottom: 1px solid #c3b36b;
+      color: #4b3f00;
+      font-weight: bold;
+      font-size: 13px;
+    }
+
+    .feature-body {
+      padding: 7px;
+    }
+
+    .retro-button {
+      display: inline-block;
+      padding: 4px 10px;
+      border: 2px outset #d7e3f4;
+      background: #e9eef5;
+      color: var(--link);
+      font-size: 12px;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 6px 0 9px;
+      font-size: 12px;
+    }
+
+    .info-table th {
+      background: var(--header-blue);
+      color: #ffffff;
+      border: 1px solid #244e78;
+      padding: 5px 6px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .info-table td {
+      border: 1px solid var(--border);
+      padding: 5px 6px;
+      vertical-align: top;
+      background: var(--card-gray);
+    }
+
+    .info-table tr:nth-child(even) td {
+      background: #eef2f6;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 1px 4px;
+      margin: 0 3px 3px 0;
+      border: 1px solid #7e9bbb;
+      background: #eef4fb;
+      color: #123b65;
+      font-size: 11px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .directory-card {
+      border: 1px solid var(--border);
+      margin: 7px 0;
+      background: var(--card-gray);
+    }
+
+    .directory-head {
+      padding: 5px 7px;
+      background: var(--light-blue);
+      border-bottom: 1px solid var(--border);
+      font-weight: bold;
+    }
+
+    .directory-body {
+      padding: 7px;
+    }
+
+    .case-study-grid {
+      display: grid;
+      grid-template-columns: 108px minmax(0, 1fr);
+      gap: 8px;
+      align-items: start;
+    }
+
+    .project-thumb {
+      display: block;
+      text-decoration: none;
+    }
+
+    .project-thumb img {
+      display: block;
+      width: 100%;
+      height: 72px;
+      object-fit: cover;
+      border: 1px solid #7d8da1;
+      background: #ffffff;
+    }
+
+    .project-thumb.logo-thumb img {
+      object-fit: contain;
+      padding: 8px;
+    }
+
+    .project-thumb.diagram-thumb img {
+      object-fit: contain;
+      padding: 3px;
+    }
+
+    .project-thumb.emerson-thumb img {
+      object-fit: contain;
+      object-position: center;
+      padding: 4px;
+    }
+
+    .meta-row {
+      margin: 3px 0;
+      font-size: 12px;
+    }
+
+    .meta-row strong {
+      color: #333333;
+    }
+
+    .small-card {
+      border-bottom: 1px dotted #b8c6d6;
+      padding: 6px 0;
+      font-size: 12px;
+    }
+
+    .small-card:first-child {
+      padding-top: 0;
+    }
+
+    .small-card:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .small-card a {
+      font-weight: bold;
+    }
+
+    .link-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 3px 8px;
+      margin-top: 4px;
+    }
+
+    .tool-link {
+      display: grid;
+      grid-template-columns: 18px minmax(0, 1fr);
+      gap: 4px;
+      align-items: center;
+      min-height: 22px;
+    }
+
+    .tool-link img {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+      border: 1px solid #c3cfdd;
+      background: #ffffff;
+      padding: 1px;
+    }
+
+    .category-block {
+      border: 1px solid var(--border);
+      margin: 7px 0;
+      background: var(--card-gray);
+    }
+
+    .category-title {
+      padding: 4px 6px;
+      background: #e6edf6;
+      border-bottom: 1px solid var(--border);
+      color: #123b65;
+      font-weight: bold;
+    }
+
+    .category-body {
+      padding: 6px;
+    }
+
+    .form-table input,
+    .form-table select,
+    .form-table textarea {
+      width: 100%;
+      border: 1px solid #8aa7c4;
+      padding: 4px;
+      font-family: Arial, Verdana, Tahoma, sans-serif;
+      font-size: 12px;
+      background: var(--card-gray);
+    }
+
+    .form-table textarea {
+      min-height: 86px;
+      resize: vertical;
+    }
+
+    .footer {
+      padding: 8px;
+      text-align: center;
+      background: #f1f4f8;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+    }
+
+    .footer-links {
+      margin-bottom: 4px;
+    }
+
+    .back-top {
+      text-align: right;
+      font-size: 12px;
+      margin-top: 6px;
+    }
+
+    .notice {
+      border: 1px solid #c3b36b;
+      background: #fff9d6;
+      padding: 6px;
+      font-weight: bold;
+    }
+
+    .nowrap {
+      white-space: nowrap;
+    }
+
+    /* ── Lightbox ── */
+    #lightbox-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.72);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      cursor: zoom-out;
+    }
+
+    #lightbox-overlay.active {
+      display: flex;
+    }
+
+    #lightbox-overlay img {
+      max-width: min(90vw, 900px);
+      max-height: 85vh;
+      object-fit: contain;
+      border: 3px solid #c7d8ea;
+      background: #ffffff;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+      cursor: default;
+    }
+
+    #lightbox-close {
+      position: fixed;
+      top: 14px;
+      right: 18px;
+      background: #1f5f9f;
+      color: #ffffff;
+      border: 2px outset #d7e3f4;
+      font-size: 14px;
+      font-weight: bold;
+      padding: 4px 12px;
+      cursor: pointer;
+      z-index: 10000;
+      font-family: Arial, Verdana, Tahoma, sans-serif;
+    }
+
+    #lightbox-close:hover {
+      background: #336699;
+    }
+
+    .zoomable {
+      cursor: zoom-in;
+    }
+
+    @media (max-width: 920px) {
+      .layout {
+        grid-template-columns: 180px minmax(0, 1fr);
+      }
+
+      .right-col {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .right-col .panel {
+        margin-bottom: 0;
+      }
+    }
+
+    @media (max-width: 680px) {
+      body {
+        font-size: 12px;
+      }
+
+      .page {
+        max-width: 100%;
+        margin: 0;
+        border-left: 0;
+        border-right: 0;
+      }
+
+      .topbar,
+      .status-strip {
+        grid-template-columns: 1fr;
+        display: block;
+      }
+
+      .site-name,
+      .top-meta {
+        text-align: left;
+      }
+
+      .top-meta {
+        margin-top: 4px;
+      }
+
+      .banner-identity {
+        margin-bottom: 6px;
+      }
+
+      .banner-photo {
+        width: 52px;
+        height: 52px;
+      }
+
+      .layout,
+      .right-col {
+        display: block;
+      }
+
+      .link-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .intro-grid,
+      .logo-strip,
+      .case-study-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-photo-frame {
+        max-width: 230px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      .info-table {
+        font-size: 11px;
+      }
+    }
+  </style>
+</head>
+<body id="top">
+  <div class="page">
+    <header>
+      <div class="topbar">
+        <div class="banner-identity">
+          <img class="banner-photo" src="assets/me.png" alt="Lyndon standing beside a public banner">
+          <div class="site-name">Lyndon Kaizer C. Saturio</div>
+        </div>
+        <div class="top-meta">AI Solutions Analyst Online | Systems Analyst Directory | Last Updated: 2026</div>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="#introduction">Introduction</a>
+        <a href="#about">About</a>
+        <a href="#career">Career</a>
+        <a href="#projects">Projects</a>
+        <a href="#systems-design">Systems Design</a>
+        <a href="#tech-stack">Tech Stack</a>
+        <a href="#clients">Clients</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="status-strip">
+        <img class="badge-img" src="assets/portfolio-badge.svg" alt="Retro badge reading AI SYS API">
+        <span><strong>You are visitor number:</strong> 0000240 | Featured System of the Week: Enterprise Promo & Workflow Systems</span>
+        <span class="nowrap">Best viewed in 1024x768</span>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="left-col" aria-label="Inside Portfolio">
+        <section class="panel">
+          <div class="panel-title">Inside Portfolio</div>
+          <div class="panel-body">
+            <ul class="side-list">
+              <li><a href="#introduction">Introduction</a></li>
+              <li><a href="#about">About Lyndon</a></li>
+              <li><a href="#career">Career Deep Dive</a></li>
+              <li><a href="#projects">Projects & Case Studies</a></li>
+              <li><a href="#systems-design">Systems Design</a></li>
+              <li><a href="#tech-stack">Tech Stack</a></li>
+              <li><a href="#clients">Clients & Stakeholders</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="Lyndon_Kaizer_Saturio_Resume.txt" download>Download Resume</a></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-title">Quick Stats</div>
+          <div class="panel-body">
+            <ul class="compact-list">
+              <li>240 DevOps internship hours</li>
+              <li>50% faster testing process</li>
+              <li>6-layer systems framework</li>
+              <li>4 promo signoff tracks</li>
+              <li>50+ students supported</li>
+              <li>20+ officers recruited</li>
+              <li>3-year Python champion</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-title">Current Focus</div>
+          <div class="panel-body">
+            <ul class="compact-list">
+              <li><span class="tag">[AI]</span> n8n Automation</li>
+              <li><span class="tag">[SYS]</span> Lovable Systems</li>
+              <li>ChatGPT Enterprise</li>
+              <li>Claude Enterprise</li>
+              <li><span class="tag">[API]</span> Meta CAPI</li>
+              <li><span class="tag">[UAT]</span> MakeForms UAT</li>
+              <li><span class="tag">[MFT]</span> MFT/CIBI Automation</li>
+              <li>Secure File Transfer</li>
+            </ul>
+          </div>
+        </section>
+      </aside>
+
+      <main class="center-col">
+        <section class="main-section" id="introduction">
+          <div class="section-title">Yahoo!-style bar: Introduction</div>
+          <div class="section-body">
+            <div class="intro-grid">
+              <div>
+                <h1>Welcome to Lyndon's Systems & AI Portfolio</h1>
+                <p>I design AI-enabled systems that connect business goals, automation workflows, and secure enterprise operations. My work spans n8n automation, Lovable low-code systems, ChatGPT Enterprise, Claude Enterprise, MakeForms UAT, Meta CAPI architecture, MFT/CIBI secure file-transfer automation, and client-ready systems documentation.</p>
+                <div class="feature-panel">
+                  <div class="feature-title">Today's Featured Work</div>
+                  <div class="feature-body">
+                    <h3>Enterprise Promo & Workflow Systems</h3>
+                    <p>Systems analysis and delivery support for referral promos, campaign infrastructure, UAT environments, workflow automation, cyber-review preparation, and production readiness.</p>
+                    <a class="retro-button" href="#career">View Career Deep Dive</a>
+                  </div>
+                </div>
+              </div>
+              <div class="profile-photo-frame">
+                <img src="assets/me1.png" alt="Lyndon at an artificial intelligence and automation strategy workshop">
+                <div class="media-caption">AI & Automation Strategy Workshop 2025</div>
+              </div>
+            </div>
+            <div class="back-top"><a href="#top">Back to Top</a></div>
+          </div>
+        </section>
+
+        <section class="main-section" id="about">
+          <div class="section-title">About Lyndon</div>
+          <div class="section-body">
+            <p>I operate at the intersection of business operations and technical delivery. My work is not only about building workflows; it is about understanding why a process exists, where it breaks, what systems are involved, how data moves, who signs off, and what the business needs to trust before launch.</p>
+            <table class="info-table">
+              <thead>
+                <tr>
+                  <th>Field</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Name</td><td>Lyndon Kaizer C. Saturio</td></tr>
+                <tr><td>Location</td><td>Pasig City, Philippines</td></tr>
+                <tr><td>Role</td><td>AI Solutions Analyst / Systems Analyst</td></tr>
+                <tr><td>Specialty</td><td>AI automation, systems design, workflow analysis, UAT, secure file transfer</td></tr>
+                <tr><td>Education</td><td>BS Computer Engineering, Cum Laude, GPA 1.89</td></tr>
+                <tr><td>Thesis</td><td>Smart Incubator using Modified Deep Convolutional Neural Networks</td></tr>
+                <tr><td>Thesis Note</td><td>Accepted by the National Library of the Philippines</td></tr>
+                <tr><td>Senior High</td><td>STEM, With Honors, 91.97 Average</td></tr>
+              </tbody>
+            </table>
+            <div class="feature-panel">
+              <div class="feature-title">Offline Interests</div>
+              <div class="feature-body">Chess, reading, writing, Philippine history, vintage films and memorabilia, cooking, and continuous learning.</div>
+            </div>
+            <div class="back-top"><a href="#top">Back to Top</a></div>
+          </div>
+        </section>
+
+        <section class="main-section" id="career">
+          <div class="section-title">Career Deep Dive</div>
+          <div class="section-body">
+            <h2>GoTyme Philippines</h2>
+            <h3>AI Solutions Analyst / Systems Analyst - TechOps</h3>
+            <div class="logo-strip" aria-label="Career organization logos">
+              <div class="logo-tile"><img src="assets/gotyme.png" alt="GoTyme Bank logo"></div>
+              <div class="logo-tile"><img class="emerson-mark" src="assets/emerson-logo.png" alt="Emerson logo"></div>
+            </div>
+            <table class="info-table">
+              <thead>
+                <tr>
+                  <th>Area</th>
+                  <th>Specific Work</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Promo Systems</td><td>Accenture Referral Program, payroll conversion, market penetration, referral flow support</td></tr>
+                <tr><td>Workflow Automation</td><td>n8n, MakeForms-to-n8n trigger review, scheduled workflows, AI Agent flows</td></tr>
+                <tr><td>Low-Code Apps</td><td>Lovable, AIE Project Hub, Lovable x n8n architecture review</td></tr>
+                <tr><td>AI Platforms</td><td>ChatGPT Enterprise, Claude Enterprise, Custom GPTs, migration planning</td></tr>
+                <tr><td>Martech</td><td>Meta Business Suite, Meta CAPI, AppsFlyer, MoEngage, Segment</td></tr>
+                <tr><td>Secure Transfer</td><td>MFT/CIBI, SFTP, FileZilla, Kleopatra, PGP/GPG, <code>.gpg</code> files</td></tr>
+                <tr><td>API Testing</td><td>cURL, REST APIs, JSON payloads, webhooks, authentication headers</td></tr>
+                <tr><td>Documentation</td><td>UAT notes, stakeholder updates, cyber-review coordination, production readiness</td></tr>
+              </tbody>
+            </table>
+            <ul class="plain-list">
+              <li><strong>Analyzed</strong> enterprise promo systems for payroll-conversion and market-penetration initiatives.</li>
+              <li><strong>Coordinated</strong> promo readiness across <strong>4 signoff tracks</strong>: vendor SIT/SAT, backend workflow automation, Cyber VAPT, and go-live preparation.</li>
+              <li><strong>Tracked</strong> referral-promo launch risk against a <strong>July 1 target go-live</strong> and <strong>2-week vendor testing window</strong>.</li>
+              <li><strong>Validated</strong> staging-page and UAT MakeForms alignment for referral-promo implementation.</li>
+              <li><strong>Reviewed</strong> Meta CAPI and Meta Business Suite architecture for conversion tracking, business-chat tooling, hashed-user uploads, and Meta Ads Manager audience flows.</li>
+              <li><strong>Analyzed</strong> martech stack patterns involving AppsFlyer, MoEngage, Segment, Meta CAPI, attribution postbacks, Custom Audiences, and Lookalike Audiences.</li>
+              <li><strong>Supported</strong> MFT/CIBI automation by validating IAM access, SFTP paths, encrypted <code>.gpg</code> files, outbound staging flows, and vendor file-exchange readiness.</li>
+              <li><strong>Used</strong> FileZilla, Kleopatra, SFTP, PGP/GPG encryption, and secure file-transfer concepts to support encrypted BFILE/CFILE handling.</li>
+              <li><strong>Reviewed</strong> n8n workflow readiness across <strong>6 production-control areas</strong>.</li>
+              <li><strong>Identified</strong> a MakeForms-to-n8n workflow risk where <strong>100% of registrations could trigger executions</strong>, even when invalid.</li>
+              <li><strong>Coordinated</strong> ChatGPT-to-Claude migration planning for chats, projects, workflows, and custom GPTs.</li>
+              <li><strong>Supported</strong> Claude Enterprise and ChatGPT Enterprise adoption by comparing use cases, migration paths, workflow continuity, and user-readiness needs.</li>
+              <li><strong>Tested</strong> API and workflow behavior using cURL, REST APIs, webhooks, JSON payload validation, request/response checks, and authentication headers.</li>
+              <li><strong>Designed</strong> systems-analysis checks across <strong>6 layers</strong>: UI, form capture, workflow automation, API integration, security review, and production operations.</li>
+            </ul>
+            <hr>
+            <h2>Emerson</h2>
+            <h3>DevOps Infrastructure Intern</h3>
+            <ul class="plain-list">
+              <li><strong>Completed</strong> <strong>240 hours</strong> of onsite DevOps Infrastructure internship work.</li>
+              <li><strong>Used</strong> K6 and Grafana to monitor Guardian website performance metrics.</li>
+              <li><strong>Automated</strong> website performance testing using PowerShell scripts, reducing manual effort and making the process <strong>50% faster</strong>.</li>
+              <li><strong>Reviewed</strong> Microsoft Azure, Agile delivery, SQL pipeline creation, ETL concepts, and DevOps practices.</li>
+            </ul>
+            <div class="back-top"><a href="#top">Back to Top</a></div>
+          </div>
+        </section>
+
+        <section class="main-section" id="projects">
+          <div class="section-title">Projects & Case Studies Directory</div>
+          <div class="section-body">
+            <p><strong>Case Study Archive</strong> | Client-safe project summaries | Last Updated: 2026</p>
+
+            <article class="directory-card">
+              <div class="directory-head"><a href="#projects">Accenture Referral Program / Promo Market Penetration</a></div>
+              <div class="directory-body">
+                <div class="case-study-grid">
+                  <a class="project-thumb logo-thumb" href="#projects" aria-label="Accenture referral promo visual reference">
+                    <img src="assets/gotyme.png" alt="GoTyme Bank visual reference" loading="lazy">
+                  </a>
+                  <div>
+                    <div class="meta-row"><strong>Category:</strong> Promo Systems / Market Penetration</div>
+                    <div class="meta-row"><strong>Systems:</strong> MakeForms, staging pages, workflow automation, Cyber VAPT, UAT</div>
+                    <div class="meta-row"><strong>Metrics:</strong> 4 signoff tracks, July 1 target go-live, 2-week vendor testing window</div>
+                    <p>Supported referral and payroll-conversion promo systems designed to increase organic adoption among Accenture employees. Coordinated staging-page validation, UAT MakeForms alignment, cyber-review preparation, and launch-readiness tracking.</p>
+                    <div class="meta-row"><strong>Client-safe note:</strong> Excludes private links, ticket numbers, credentials, and internal implementation details.</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="directory-card">
+              <div class="directory-head"><a href="#projects">Meta Business Suite / Meta CAPI</a></div>
+              <div class="directory-body">
+                <div class="case-study-grid">
+                  <a class="project-thumb diagram-thumb" href="#projects" aria-label="Meta CAPI architecture visual reference">
+                    <img src="assets/Screenshot%202026-06-04%20142919.png" alt="Meta CAPI architecture diagram" loading="lazy">
+                  </a>
+                  <div>
+                    <div class="meta-row"><strong>Category:</strong> Martech / Conversion Architecture</div>
+                    <div class="meta-row"><strong>Systems:</strong> Meta Business Suite, Meta CAPI, Meta Ads Manager, AppsFlyer, MoEngage, Segment, cURL, REST APIs</div>
+                    <div class="meta-row"><strong>Metrics:</strong> Conversion-signal architecture review, audience-flow mapping, attribution-pattern analysis</div>
+                    <p>Reviewed conversion-signal architecture, event forwarding, hashed-user audience concepts, Custom Audiences, Lookalike Audiences, attribution postbacks, and campaign-measurement flows.</p>
+                    <div class="meta-row"><strong>Client-safe note:</strong> Focuses on architecture concepts without confidential ad-account data.</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="directory-card">
+              <div class="directory-head"><a href="#projects">MFT / CIBI Automation</a></div>
+              <div class="directory-body">
+                <div class="case-study-grid">
+                  <a class="project-thumb" href="#projects" aria-label="Secure file-transfer banking visual reference">
+                    <img src="assets/Screenshot%202026-06-04%20142818.png" alt="Meta Business Suite operating dashboard" loading="lazy">
+                  </a>
+                  <div>
+                    <div class="meta-row"><strong>Category:</strong> Secure File Transfer / Banking Operations</div>
+                    <div class="meta-row"><strong>Systems:</strong> MFT, CIBI, SFTP, FileZilla, Kleopatra, PGP/GPG, <code>.gpg</code> files, IAM access</div>
+                    <div class="meta-row"><strong>Metrics:</strong> 5 control layers: access, endpoint, encryption, staging, validation</div>
+                    <p>Supported secure vendor file-transfer automation involving encrypted BFILE/CFILE exchange paths, SFTP validation, IAM access requirements, outbound MFT staging flow review, and encrypted <code>.gpg</code> file handling.</p>
+                    <div class="meta-row"><strong>Client-safe note:</strong> No endpoint paths, credentials, private keys, or internal file identifiers included.</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="directory-card">
+              <div class="directory-head"><a href="#projects">n8n Workflow Governance</a></div>
+              <div class="directory-body">
+                <div class="case-study-grid">
+                  <a class="project-thumb" href="#projects" aria-label="n8n workflow governance visual reference">
+                    <img src="assets/n8n.png" alt="n8n workflow canvas screenshot" loading="lazy">
+                  </a>
+                  <div>
+                    <div class="meta-row"><strong>Category:</strong> AI Automation / Workflow Governance</div>
+                    <div class="meta-row"><strong>Systems:</strong> n8n, AI Agents, webhooks, scheduled triggers, REST APIs, cURL</div>
+                    <div class="meta-row"><strong>Metrics:</strong> 6 production-control areas, 100% invalid-trigger risk identified</div>
+                    <p>Reviewed n8n workflow readiness, execution triggers, scheduled automations, AI Agent steps, credentials, and error handling. Identified a workflow risk where all registrations could trigger executions regardless of validity.</p>
+                    <div class="meta-row"><strong>Client-safe note:</strong> Workflow logic is summarized without exposing automation internals.</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="directory-card">
+              <div class="directory-head"><a href="#projects">Lovable / AIE Project Hub</a></div>
+              <div class="directory-body">
+                <div class="case-study-grid">
+                  <a class="project-thumb" href="#projects" aria-label="Lovable project hub visual reference">
+                    <img src="assets/lovable.png" alt="Lovable AIE Project Hub dashboard screenshot" loading="lazy">
+                  </a>
+                  <div>
+                    <div class="meta-row"><strong>Category:</strong> Low-Code Systems</div>
+                    <div class="meta-row"><strong>Systems:</strong> Lovable, n8n, Slack Analytics API, dashboards, workflow trackers</div>
+                    <div class="meta-row"><strong>Metrics:</strong> Lovable-only, n8n-only, and Lovable x n8n build paths reviewed</div>
+                    <p>Supported Lovable-based low-code systems and reviewed whether projects should be built as Lovable-only, n8n-only, or Lovable x n8n solutions.</p>
+                    <div class="meta-row"><strong>Client-safe note:</strong> Internal dashboards and project links are excluded.</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="directory-card">
+              <div class="directory-head"><a href="#projects">ChatGPT Enterprise to Claude Enterprise Migration</a></div>
+              <div class="directory-body">
+                <div class="case-study-grid">
+                  <a class="project-thumb logo-thumb" href="#projects" aria-label="AI platform migration visual reference">
+                    <img src="assets/openai.jpg" alt="OpenAI logo visual reference" loading="lazy">
+                  </a>
+                  <div>
+                    <div class="meta-row"><strong>Category:</strong> AI Enablement</div>
+                    <div class="meta-row"><strong>Systems:</strong> ChatGPT Enterprise, Claude Enterprise, Custom GPTs, Projects, Workflows</div>
+                    <div class="meta-row"><strong>Metrics:</strong> Chats, projects, workflows, custom GPTs, and platform-continuity paths reviewed</div>
+                    <p>Supported migration planning for chats, projects, workflows, custom GPTs, and AI-platform continuity.</p>
+                    <div class="meta-row"><strong>Client-safe note:</strong> Migration inventory details are generalized.</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="directory-card">
+              <div class="directory-head"><a href="#projects">Airtable + Lawmatics + RingCentral Workflow Troubleshooting</a></div>
+              <div class="directory-body">
+                <div class="case-study-grid">
+                  <a class="project-thumb" href="#projects" aria-label="Airtable Lawmatics troubleshooting visual reference">
+                    <img src="assets/airtable.png" alt="Airtable Lawmatics interface screenshot" loading="lazy">
+                  </a>
+                  <div>
+                    <div class="meta-row"><strong>Category:</strong> Workflow Troubleshooting / Data Matching</div>
+                    <div class="meta-row"><strong>Systems:</strong> Airtable, Lawmatics, RingCentral</div>
+                    <div class="meta-row"><strong>Metrics:</strong> 13 workflow nodes reviewed</div>
+                    <p>Troubleshot cross-system matching between Lawmatics matters and RingCentral calls using normalized phone fields, Airtable linked records, and upsert logic.</p>
+                    <div class="meta-row"><strong>Client-safe note:</strong> Client names, phone data, and matter records are omitted.</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="directory-card">
+              <div class="directory-head"><a href="#projects">DevOps Performance Testing Automation</a></div>
+              <div class="directory-body">
+                <div class="case-study-grid">
+                  <a class="project-thumb logo-thumb emerson-thumb" href="#projects" aria-label="Emerson DevOps performance testing visual reference">
+                    <img src="assets/emerson-logo.png" alt="Emerson logo visual reference" loading="lazy">
+                  </a>
+                  <div>
+                    <div class="meta-row"><strong>Category:</strong> DevOps / Performance Testing</div>
+                    <div class="meta-row"><strong>Systems:</strong> K6, Grafana, PowerShell</div>
+                    <div class="meta-row"><strong>Metrics:</strong> 240 hours, 50% faster testing process</div>
+                    <p>Automated website performance testing and reduced manual testing effort by 50%.</p>
+                    <div class="meta-row"><strong>Client-safe note:</strong> Performance data and infrastructure details are summarized.</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <div class="back-top"><a href="#top">Back to Top</a></div>
+          </div>
+        </section>
+
+        <section class="main-section" id="systems-design">
+          <div class="section-title">Systems Design Framework</div>
+          <div class="section-body">
+            <table class="info-table">
+              <thead>
+                <tr>
+                  <th>Layer</th>
+                  <th>What I Check</th>
+                  <th>Example Tools</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>1. User Interface</td><td>What the user sees and submits</td><td>Lovable, promo pages, dashboards</td></tr>
+                <tr><td>2. Form Capture</td><td>Fields, validation, submission behavior</td><td>MakeForms, UAT forms</td></tr>
+                <tr><td>3. Workflow Automation</td><td>Triggers, schedules, conditions, failures</td><td>n8n, AI Agents</td></tr>
+                <tr><td>4. API Integration</td><td>Payloads, auth, webhooks, responses</td><td>cURL, REST APIs, JSON</td></tr>
+                <tr><td>5. Security Review</td><td>Access, encryption, VAPT, secure transfer</td><td>IAM, SFTP, PGP/GPG, Kleopatra</td></tr>
+                <tr><td>6. Operations</td><td>Monitoring, documentation, go-live handoff</td><td>Confluence, Jira, stakeholder updates</td></tr>
+              </tbody>
+            </table>
+            <h3>How I Think Through a System</h3>
+            <ul class="plain-list">
+              <li>What is the business goal?</li>
+              <li>What user action starts the process?</li>
+              <li>What data is captured?</li>
+              <li>What system owns the data?</li>
+              <li>What workflow runs next?</li>
+              <li>What APIs or files are involved?</li>
+              <li>What can fail?</li>
+              <li>What must be validated before production?</li>
+              <li>What does the stakeholder need to understand?</li>
+              <li>What should be documented for handoff?</li>
+            </ul>
+            <div class="back-top"><a href="#top">Back to Top</a></div>
+          </div>
+        </section>
+
+        <section class="main-section" id="tech-stack">
+          <div class="section-title">Tech Stack Directory</div>
+          <div class="section-body">
+            <div class="category-block">
+              <div class="category-title">AI & Automation</div>
+              <div class="category-body">n8n, ChatGPT Enterprise, Claude Enterprise, AI Agents, Custom GPTs, Prompt Engineering, Workflow Automation, AI Workflow Evaluation</div>
+            </div>
+            <div class="category-block">
+              <div class="category-title">Low-Code / Workflow Platforms</div>
+              <div class="category-body">Lovable, MakeForms, Airtable, FlutterFlow, Confluence, Jira, Microsoft Forms, UAT Forms, Workflow Trackers</div>
+            </div>
+            <div class="category-block">
+              <div class="category-title">API & Systems Integration</div>
+              <div class="category-body">REST APIs, Webhooks, cURL, JSON Payloads, API Headers, Authentication Tokens, Middleware Analysis, Direct API Validation, Outlook Connectors, Slack Analytics API</div>
+            </div>
+            <div class="category-block">
+              <div class="category-title">Marketing / Martech / Promo Systems</div>
+              <div class="category-body">Meta Business Suite, Meta CAPI, Meta Ads Manager, AppsFlyer, MoEngage, Segment, Custom Audiences, Lookalike Audiences, Campaign Conversion Events, Attribution Postbacks, Referral Promo Systems</div>
+            </div>
+            <div class="category-block">
+              <div class="category-title">Secure File Transfer / Banking Operations</div>
+              <div class="category-body">MFT, CIBI File Flows, SFTP, FileZilla, Kleopatra, PGP/GPG Encryption, <code>.gpg</code> Files, IAM User Access, BFILE/CFILE Exchange, Staging Transfer Flows</div>
+            </div>
+            <div class="category-block">
+              <div class="category-title">Cloud / DevOps / Infrastructure</div>
+              <div class="category-body">AWS EC2, AWS Lambda, Microsoft Azure, K6, Grafana, PowerShell, Linux, Git, Bitbucket, SQL Pipelines, ETL Concepts</div>
+            </div>
+            <div class="category-block">
+              <div class="category-title">Programming / Data</div>
+              <div class="category-body">Python, JavaScript, SQL, C++, C#, Java, PHP, Pandas, NumPy, TensorFlow, PyTorch, Scikit-learn, SARIMA, Multiple Linear Regression</div>
+            </div>
+            <div class="category-block">
+              <div class="category-title">Design / Documentation</div>
+              <div class="category-body">Systems Design, Process Mapping, Lucidchart, Figma, Canva, Adobe Creative Suite, Technical Documentation, Stakeholder Updates, UAT Notes, Cyber-Review Coordination</div>
+            </div>
+            <div class="back-top"><a href="#top">Back to Top</a></div>
+          </div>
+        </section>
+
+        <section class="main-section" id="clients">
+          <div class="section-title">Clients & Stakeholder Directory</div>
+          <div class="section-body">
+            <div class="category-block">
+              <div class="category-title">Enterprise Banking / Fintech Operations</div>
+              <div class="category-body">
+                <p>AI workflows, promo systems, UAT coordination, secure file transfer, and systems documentation.</p>
+                <strong>Representative work:</strong>
+                <ul class="plain-list">
+                  <li>Referral promo readiness</li>
+                  <li>Payroll conversion support</li>
+                  <li>MakeForms UAT</li>
+                  <li>Meta CAPI architecture</li>
+                  <li>MFT/CIBI automation</li>
+                </ul>
+              </div>
+            </div>
+            <div class="category-block">
+              <div class="category-title">Marketing / Martech Teams</div>
+              <div class="category-body">Conversion tracking, audience architecture, campaign measurement, Meta CAPI, AppsFlyer, MoEngage, Segment, and Meta Ads Manager concepts.</div>
+            </div>
+            <div class="category-block">
+              <div class="category-title">Security / Cyber / Risk Stakeholders</div>
+              <div class="category-body">Cyber-review preparation, VAPT readiness, access controls, secure file transfer, encryption, IAM requirements, and staging validation.</div>
+            </div>
+            <div class="category-block">
+              <div class="category-title">Business Operations / Enablement Teams</div>
+              <div class="category-body">Low-code workflow support, n8n automation readiness, ChatGPT/Claude adoption, internal AI enablement, stakeholder communications.</div>
+            </div>
+            <div class="category-block">
+              <div class="category-title">Academic / Engineering Foundations</div>
+              <div class="category-body">Computer Engineering, AI/ML projects, DevOps internship, predictive modeling, smart incubator thesis, Python systems, and SQL projects.</div>
+            </div>
+            <p class="notice">Case studies are written in a client-safe format and exclude confidential implementation details, credentials, private links, and internal ticket numbers.</p>
+            <div class="back-top"><a href="#top">Back to Top</a></div>
+          </div>
+        </section>
+
+        <section class="main-section" id="contact">
+          <div class="section-title">Contact Lyndon</div>
+          <div class="section-body">
+            <p>Let's discuss systems, automation, AI workflows, promo platform delivery, secure file-transfer validation, API integration, or stakeholder-ready documentation.</p>
+            <table class="info-table">
+              <thead>
+                <tr>
+                  <th>Contact Type</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Work Email</td><td><a href="mailto:kaizer.saturio@gotyme.com.ph">kaizer.saturio@gotyme.com.ph</a></td></tr>
+                <tr><td>Personal Email</td><td><a href="mailto:kaizersaturio@gmail.com">kaizersaturio@gmail.com</a></td></tr>
+                <tr><td>Phone</td><td>+63 917 794 9439</td></tr>
+                <tr><td>GitHub</td><td><a href="https://github.com/lyndonkaizer">github.com/lyndonkaizer</a></td></tr>
+                <tr><td>Location</td><td>Pasig City, Philippines</td></tr>
+              </tbody>
+            </table>
+            <form action="mailto:kaizersaturio@gmail.com" method="post" enctype="text/plain">
+              <table class="info-table form-table">
+                <tbody>
+                  <tr>
+                    <th><label for="name">Name</label></th>
+                    <td><input id="name" name="name" type="text" autocomplete="name"></td>
+                  </tr>
+                  <tr>
+                    <th><label for="email">Email</label></th>
+                    <td><input id="email" name="email" type="email" autocomplete="email"></td>
+                  </tr>
+                  <tr>
+                    <th><label for="company">Company / Organization</label></th>
+                    <td><input id="company" name="company" type="text" autocomplete="organization"></td>
+                  </tr>
+                  <tr>
+                    <th><label for="project-type">Project Type</label></th>
+                    <td>
+                      <select id="project-type" name="project_type">
+                        <option>AI Automation</option>
+                        <option>Systems Analysis</option>
+                        <option>Low-Code App</option>
+                        <option>Promo / Martech</option>
+                        <option>Secure File Transfer</option>
+                        <option>API Integration</option>
+                        <option>Documentation</option>
+                        <option>Other</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th><label for="message">Message</label></th>
+                    <td><textarea id="message" name="message"></textarea></td>
+                  </tr>
+                  <tr>
+                    <th>Action</th>
+                    <td><button class="retro-button" type="submit">Send Message</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </form>
+            <div class="back-top"><a href="#top">Back to Top</a></div>
+          </div>
+        </section>
+      </main>
+
+      <aside class="right-col" aria-label="Featured Systems Work">
+        <section class="panel">
+          <div class="panel-title">Featured Systems Work</div>
+          <div class="panel-body">
+            <div class="small-card">
+              <a href="#projects">Accenture Referral Promo</a>
+              <p><span class="tag">[UAT]</span> Promo readiness, signoff tracking, staging-page review.</p>
+            </div>
+            <div class="small-card">
+              <a href="#projects">Meta CAPI / Martech</a>
+              <p><span class="tag">[API]</span> Conversion-signal architecture and audience concepts.</p>
+            </div>
+            <div class="small-card">
+              <a href="#projects">MFT CIBI Automation</a>
+              <p><span class="tag">[MFT]</span> Encrypted vendor file-transfer control review.</p>
+            </div>
+            <div class="small-card">
+              <a href="#projects">n8n Workflow Governance</a>
+              <p><span class="tag">[AI]</span> Production-control checks for automation workflows.</p>
+            </div>
+            <div class="small-card">
+              <a href="#projects">ChatGPT to Claude Migration</a>
+              <p><span class="tag">[AI]</span> AI-platform continuity for chats, projects, and GPTs.</p>
+            </div>
+            <div class="small-card">
+              <a href="#projects">Lovable AIE Project Hub</a>
+              <p><span class="tag">[SYS]</span> Low-code project hub and Lovable x n8n review.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-title">Tools Directory</div>
+          <div class="panel-body">
+            <div class="link-grid">
+              <a class="tool-link" href="#tech-stack"><img src="assets/n8n1.png" alt="">n8n</a>
+              <a class="tool-link" href="#tech-stack"><img src="assets/lovable.avif" alt="">Lovable</a>
+              <a class="tool-link" href="#tech-stack"><img src="assets/openai.jpg" alt="">ChatGPT Enterprise</a>
+              <a class="tool-link" href="#tech-stack"><img src="assets/claude-logo.svg" alt="">Claude Enterprise</a>
+              <a href="#tech-stack">MakeForms</a>
+              <a href="#tech-stack">cURL</a>
+              <a class="tool-link" href="#tech-stack"><img src="assets/meta.webp" alt="">Meta CAPI</a>
+              <a href="#tech-stack">FileZilla</a>
+              <a href="#tech-stack">Kleopatra</a>
+              <a href="#tech-stack">SFTP</a>
+              <a href="#tech-stack">PGP/GPG</a>
+              <a class="tool-link" href="#tech-stack"><img src="assets/airtable1.png" alt="">Airtable</a>
+              <a href="#tech-stack">RingCentral</a>
+              <a href="#tech-stack">Lawmatics</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-title">Featured System of the Week</div>
+          <div class="panel-body">
+            <p><strong>Enterprise Promo & Workflow Systems</strong></p>
+            <p>Referral promo, MakeForms UAT, cyber-review preparation, n8n workflow readiness, and production handoff.</p>
+            <a href="#projects">Open Case Study Archive</a>
+          </div>
+        </section>
+      </aside>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="#introduction">Introduction</a> |
+        <a href="#about">About</a> |
+        <a href="#projects">Case Study Archive</a> |
+        <a href="#tech-stack">Tools Directory</a> |
+        <a href="Lyndon_Kaizer_Saturio_Resume.txt" download>Download Resume</a> |
+        <a href="#contact">Contact</a> |
+        <a href="#top">Back to Top</a>
+      </div>
+      <div>Last Updated: 2026 | You are visitor number: 0000240 | Best viewed in 1024x768</div>
+    </footer>
+  </div>
+  <div id="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Image zoom">
+    <button id="lightbox-close" aria-label="Close">&#x2715; Close</button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    const overlay = document.getElementById('lightbox-overlay');
+    const lbImg   = document.getElementById('lightbox-img');
+    const lbClose = document.getElementById('lightbox-close');
+
+    function openLightbox(src, alt) {
+      lbImg.src = src;
+      lbImg.alt = alt || '';
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      overlay.classList.remove('active');
+      lbImg.src = '';
+      document.body.style.overflow = '';
+    }
+
+    // Mark content images as zoomable (skip tiny icons and the banner photo)
+    document.querySelectorAll(
+      '.profile-photo-frame img, .project-thumb img, .logo-tile img, .case-study-grid img, .banner-photo'
+    ).forEach(function(img) {
+      img.classList.add('zoomable');
+      img.addEventListener('click', function(e) {
+        e.preventDefault();
+        openLightbox(img.src, img.alt);
+      });
+    });
+
+    // Close on overlay background click
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeLightbox();
+    });
+
+    // Close button
+    lbClose.addEventListener('click', closeLightbox);
+
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    // Prevent clicks on the image itself from closing
+    lbImg.addEventListener('click', function(e) { e.stopPropagation(); });
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+Lyndon Kaizer C. Saturio
+AI Solutions Analyst / Systems Analyst
+Pasig City, Philippines
+
+Email: kaizersaturio@gmail.com
+Work Email: kaizer.saturio@gotyme.com.ph
+Phone: +63 917 794 9439
+GitHub: github.com/lyndonkaizer
+
+Professional Summary
+I design AI-enabled systems that connect business goals, automation workflows, and secure enterprise operations. My work spans n8n automation, Lovable low-code systems, ChatGPT Enterprise, Claude Enterprise, MakeForms UAT, Meta CAPI architecture, MFT/CIBI secure file-transfer automation, and client-ready systems documentation.
+
+Core Strengths
+- AI automation and workflow analysis
+- Systems design and UAT coordination
+- Promo systems and martech architecture review
+- Secure file-transfer validation
+- API testing, JSON payload review, webhooks, and cURL checks
+- Stakeholder-ready documentation and launch-readiness tracking
+
+GoTyme Philippines
+AI Solutions Analyst / Systems Analyst - TechOps
+- Supported Accenture referral-promo and payroll-conversion workflow readiness.
+- Coordinated promo readiness across vendor testing, workflow automation, Cyber VAPT, and go-live preparation.
+- Reviewed Meta CAPI, Meta Business Suite, attribution flows, and audience architecture concepts.
+- Supported MFT/CIBI automation with IAM, SFTP, PGP/GPG, FileZilla, Kleopatra, and encrypted .gpg file handling.
+- Reviewed n8n workflow readiness across production-control areas.
+- Supported ChatGPT Enterprise and Claude Enterprise adoption and migration planning.
+
+Emerson
+DevOps Infrastructure Intern
+- Completed 240 hours of onsite DevOps Infrastructure internship work.
+- Used K6 and Grafana for Guardian website performance monitoring.
+- Automated performance testing with PowerShell scripts, reducing manual effort by 50%.
+- Reviewed Microsoft Azure, Agile delivery, SQL pipelines, ETL concepts, and DevOps practices.
+
+Education
+BS Computer Engineering, Cum Laude, GPA 1.89
+Thesis: Smart Incubator using Modified Deep Convolutional Neural Networks
+Thesis Note: Accepted by the National Library of the Philippines
+
+Tools and Technologies
+n8n, Lovable, ChatGPT Enterprise, Claude Enterprise, MakeForms, Meta CAPI, Meta Business Suite, AppsFlyer, MoEngage, Segment, cURL, REST APIs, JSON, Webhooks, FileZilla, Kleopatra, SFTP, PGP/GPG, Airtable, RingCentral, Lawmatics, K6, Grafana, PowerShell, AWS, Azure, Python, JavaScript, SQL

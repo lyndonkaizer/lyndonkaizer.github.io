@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="88" height="31" viewBox="0 0 88 31" role="img" aria-labelledby="title desc">
+  <title id="title">Retro systems badge</title>
+  <desc id="desc">A compact old-school blue badge reading AI SYS API.</desc>
+  <rect width="88" height="31" fill="#ffffff"/>
+  <rect x="1" y="1" width="86" height="29" fill="#d7e3f4" stroke="#336699" stroke-width="2"/>
+  <rect x="4" y="4" width="80" height="10" fill="#1f5f9f"/>
+  <text x="44" y="12" fill="#ffffff" font-family="Arial,Verdana,sans-serif" font-size="8" text-anchor="middle" font-weight="bold">LYNDON.NET</text>
+  <rect x="6" y="18" width="20" height="8" fill="#ffffff" stroke="#336699"/>
+  <rect x="32" y="18" width="24" height="8" fill="#ffffff" stroke="#336699"/>
+  <rect x="62" y="18" width="20" height="8" fill="#ffffff" stroke="#336699"/>
+  <text x="16" y="24" fill="#0000cc" font-family="Arial,Verdana,sans-serif" font-size="7" text-anchor="middle" font-weight="bold">AI</text>
+  <text x="44" y="24" fill="#0000cc" font-family="Arial,Verdana,sans-serif" font-size="7" text-anchor="middle" font-weight="bold">SYS</text>
+  <text x="72" y="24" fill="#0000cc" font-family="Arial,Verdana,sans-serif" font-size="7" text-anchor="middle" font-weight="bold">API</text>
+</svg>
