@@ -811,8 +811,8 @@
         <section class="main-section" id="career">
           <div class="section-title">Career Deep Dive</div>
           <div class="section-body">
-            <h2>GoTyme Philippines</h2>
-            <h3>AI Solutions Analyst / Systems Analyst - TechOps</h3>
+            <h2>GoTyme Philippines <span class="tag">[Current]</span></h2>
+            <h3>AI Solutions Analyst / Systems Analyst - TechOps (Current Role)</h3>
             <div class="logo-strip" aria-label="Career organization logos">
               <div class="logo-tile"><img src="assets/gotyme.png" alt="GoTyme Bank logo"></div>
               <div class="logo-tile"><img class="emerson-mark" src="assets/emerson-logo.png" alt="Emerson logo"></div>
@@ -852,13 +852,52 @@
               <li><strong>Designed</strong> systems-analysis checks across <strong>6 layers</strong>: UI, form capture, workflow automation, API integration, security review, and production operations.</li>
             </ul>
             <hr>
-            <h2>Emerson</h2>
-            <h3>DevOps Infrastructure Intern</h3>
+            <h2>Emerson <span class="tag">[Internship]</span></h2>
+            <h3>DevOps Infrastructure Intern (Internship)</h3>
+            <p>This was an internship role completed as part of my engineering training.</p>
             <ul class="plain-list">
               <li><strong>Completed</strong> <strong>240 hours</strong> of onsite DevOps Infrastructure internship work.</li>
               <li><strong>Used</strong> K6 and Grafana to monitor Guardian website performance metrics.</li>
               <li><strong>Automated</strong> website performance testing using PowerShell scripts, reducing manual effort and making the process <strong>50% faster</strong>.</li>
               <li><strong>Reviewed</strong> Microsoft Azure, Agile delivery, SQL pipeline creation, ETL concepts, and DevOps practices.</li>
+            </ul>
+            <hr>
+            <h2>Client Engagements</h2>
+            <p>Freelance and contract automation work delivered for external clients, separate from my GoTyme role and Emerson internship.</p>
+
+            <h3>Gillman Immigration - NYC Immigration Law Firm (Client)</h3>
+            <div class="logo-strip" aria-label="Gillman Immigration logo" style="grid-template-columns: 220px;">
+              <div class="logo-tile"><img src="assets/BGLAWFIRM.png" alt="Gillman Immigration Law Firm logo"></div>
+            </div>
+            <div class="meta-row"><strong>Project:</strong> Lawmatics + Airtable + RingCentral integration via n8n</div>
+            <div class="meta-row"><strong>Site:</strong> <a href="https://gillmanimmigration.com/" target="_blank" rel="noopener">gillmanimmigration.com</a></div>
+            <ul class="plain-list">
+              <li><strong>Designed</strong> and troubleshot an n8n automation workflow to sync Lawmatics prospect and matter data into Airtable for centralized operational tracking and reporting.</li>
+              <li><strong>Integrated</strong> Lawmatics pipeline data into Airtable by extracting prospects, stages, practice areas, users, events, invoices, and contact details through structured n8n workflow nodes.</li>
+              <li><strong>Built</strong> a RingCentral call-log ingestion workflow in n8n to capture inbound and outbound call activity and store normalized call records in Airtable.</li>
+              <li><strong>Developed</strong> matching logic to link RingCentral call records with Lawmatics matters using normalized customer phone numbers across Airtable tables.</li>
+              <li><strong>Resolved</strong> Airtable linked-record issues by identifying that linked fields require Airtable record IDs rather than external IDs, phone numbers, or Lawmatics matter IDs.</li>
+              <li><strong>Analyzed</strong> duplicate matter creation caused by create-only logic and recommended an upsert approach to prevent duplicate Lawmatics matter records in Airtable.</li>
+              <li><strong>Normalized</strong> phone numbers and aligned field mappings across Lawmatics, RingCentral, Airtable, and n8n transformation steps to improve data reliability.</li>
+              <li><strong>Translated</strong> integration errors and workflow behavior into clear technical findings, identifying root causes in data modeling, record linking, and automation logic.</li>
+            </ul>
+
+            <h3>Nexo - Germany (Client)</h3>
+            <div class="logo-strip" aria-label="Nexo logo" style="grid-template-columns: 220px;">
+              <div class="logo-tile" style="background:#0b0b0b;"><img src="assets/NEXO.jpg" alt="Nexo logo" style="mix-blend-mode:normal;"></div>
+            </div>
+            <div class="meta-row"><strong>Contact:</strong> Engineering Manager @ Nexo, Germany</div>
+            <div class="meta-row"><strong>Project:</strong> GNews-based content automation (n8n, OpenAI, MongoDB, WordPress)</div>
+            <ul class="plain-list">
+              <li><strong>Supported</strong> the deployment and setup of an n8n automation server on Railway for a GNews-based content automation project.</li>
+              <li><strong>Built</strong> an automated workflow to fetch articles from GNews.io, process them with OpenAI, store and check records in MongoDB, and publish content to WordPress.</li>
+              <li><strong>Tested</strong> GNews article-fetching limits and adjusted the workflow to a safer lower-volume setup to avoid quota and rate-limit issues.</li>
+              <li><strong>Troubleshot</strong> MongoDB duplicate-record errors and identified that duplicate article URLs were being blocked by the database's unique-key logic.</li>
+              <li><strong>Improved</strong> workflow logic with duplicate-check handling so existing articles could be skipped instead of breaking the automation.</li>
+              <li><strong>Reviewed</strong> the generated WordPress blog output and improved HTML structure, article layout, SEO formatting, and overall post quality.</li>
+              <li><strong>Investigated</strong> article-image inclusion in WordPress posts using image URLs from the GNews response or stored MongoDB records.</li>
+              <li><strong>Troubleshot</strong> WordPress publishing 403 API errors related to credentials, permissions, REST API access, and hosting restrictions.</li>
+              <li><strong>Created</strong> client-ready progress updates explaining workflow testing, MongoDB validation, WordPress publishing, article formatting, and image handling.</li>
             </ul>
             <div class="back-top"><a href="#top">Back to Top</a></div>
           </div>
@@ -981,15 +1020,35 @@
               <div class="directory-head"><a href="#projects">Airtable + Lawmatics + RingCentral Workflow Troubleshooting</a></div>
               <div class="directory-body">
                 <div class="case-study-grid">
-                  <a class="project-thumb" href="#projects" aria-label="Airtable Lawmatics troubleshooting visual reference">
-                    <img src="assets/airtable.png" alt="Airtable Lawmatics interface screenshot" loading="lazy">
+                  <a class="project-thumb logo-thumb" href="#projects" aria-label="Gillman Immigration visual reference">
+                    <img src="assets/BGLAWFIRM.png" alt="Gillman Immigration Law Firm logo" loading="lazy">
                   </a>
                   <div>
+                    <div class="meta-row"><strong>Client:</strong> Gillman Immigration (NYC immigration law firm)</div>
                     <div class="meta-row"><strong>Category:</strong> Workflow Troubleshooting / Data Matching</div>
-                    <div class="meta-row"><strong>Systems:</strong> Airtable, Lawmatics, RingCentral</div>
+                    <div class="meta-row"><strong>Systems:</strong> n8n, Airtable, Lawmatics, RingCentral</div>
                     <div class="meta-row"><strong>Metrics:</strong> 13 workflow nodes reviewed</div>
-                    <p>Troubleshot cross-system matching between Lawmatics matters and RingCentral calls using normalized phone fields, Airtable linked records, and upsert logic.</p>
-                    <div class="meta-row"><strong>Client-safe note:</strong> Client names, phone data, and matter records are omitted.</div>
+                    <p>Designed and troubleshot an n8n workflow syncing Lawmatics prospects and matters into Airtable, with RingCentral call-log ingestion matched to matters via normalized phone numbers, linked-record fixes, and upsert logic.</p>
+                    <div class="meta-row"><strong>Client-safe note:</strong> Phone data, contact details, and matter records are omitted.</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="directory-card">
+              <div class="directory-head"><a href="#projects">GNews Content Automation (n8n + OpenAI + MongoDB + WordPress)</a></div>
+              <div class="directory-body">
+                <div class="case-study-grid">
+                  <a class="project-thumb logo-thumb" href="#projects" aria-label="Nexo content automation visual reference" style="background:#0b0b0b;">
+                    <img src="assets/NEXO.jpg" alt="Nexo logo" loading="lazy">
+                  </a>
+                  <div>
+                    <div class="meta-row"><strong>Client:</strong> Nexo (Germany)</div>
+                    <div class="meta-row"><strong>Category:</strong> AI Automation / Content Publishing</div>
+                    <div class="meta-row"><strong>Systems:</strong> n8n (Railway), GNews.io, OpenAI, MongoDB, WordPress REST API</div>
+                    <div class="meta-row"><strong>Metrics:</strong> Lower-volume fetch tuning, duplicate-check handling, 403 publish-error resolution</div>
+                    <p>Built an automated pipeline that fetches GNews articles, processes them with OpenAI, deduplicates against MongoDB, and publishes formatted posts to WordPress. Tuned fetch limits, resolved duplicate-key and 403 publishing errors, and improved HTML/SEO output and image handling.</p>
+                    <div class="meta-row"><strong>Client-safe note:</strong> Credentials, endpoints, and account details are excluded.</div>
                   </div>
                 </div>
               </div>
@@ -1066,7 +1125,7 @@
             </div>
             <div class="category-block">
               <div class="category-title">API & Systems Integration</div>
-              <div class="category-body">REST APIs, Webhooks, cURL, JSON Payloads, API Headers, Authentication Tokens, Middleware Analysis, Direct API Validation, Outlook Connectors, Slack Analytics API</div>
+              <div class="category-body">REST APIs, Webhooks, cURL, JSON Payloads, API Headers, Authentication Tokens, Middleware Analysis, Direct API Validation, Outlook Connectors, Slack Analytics API, WordPress REST API, GNews API, Lawmatics API, RingCentral API, MongoDB, OpenAI API</div>
             </div>
             <div class="category-block">
               <div class="category-title">Marketing / Martech / Promo Systems</div>

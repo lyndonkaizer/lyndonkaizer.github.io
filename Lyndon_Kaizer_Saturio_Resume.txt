@@ -18,7 +18,7 @@ Core Strengths
 - API testing, JSON payload review, webhooks, and cURL checks
 - Stakeholder-ready documentation and launch-readiness tracking
 
-GoTyme Philippines
+GoTyme Philippines (Current Role)
 AI Solutions Analyst / Systems Analyst - TechOps
 - Supported Accenture referral-promo and payroll-conversion workflow readiness.
 - Coordinated promo readiness across vendor testing, workflow automation, Cyber VAPT, and go-live preparation.
@@ -27,12 +27,31 @@ AI Solutions Analyst / Systems Analyst - TechOps
 - Reviewed n8n workflow readiness across production-control areas.
 - Supported ChatGPT Enterprise and Claude Enterprise adoption and migration planning.
 
-Emerson
+Emerson (Internship)
 DevOps Infrastructure Intern
 - Completed 240 hours of onsite DevOps Infrastructure internship work.
 - Used K6 and Grafana for Guardian website performance monitoring.
 - Automated performance testing with PowerShell scripts, reducing manual effort by 50%.
 - Reviewed Microsoft Azure, Agile delivery, SQL pipelines, ETL concepts, and DevOps practices.
+
+Client Engagements
+(Freelance / contract automation work, separate from GoTyme and the Emerson internship.)
+
+Gillman Immigration - NYC Immigration Law Firm (Client) | gillmanimmigration.com
+- Designed and troubleshot an n8n workflow to sync Lawmatics prospect and matter data into Airtable for centralized operational tracking and reporting.
+- Integrated Lawmatics pipeline data (prospects, stages, practice areas, users, events, invoices, contact details) into Airtable through structured n8n nodes.
+- Built a RingCentral call-log ingestion workflow to capture inbound/outbound call activity as normalized records in Airtable.
+- Developed matching logic to link RingCentral calls with Lawmatics matters using normalized phone numbers.
+- Resolved Airtable linked-record issues (linked fields require Airtable record IDs, not external IDs/phone numbers/matter IDs) and recommended upsert logic to prevent duplicate matters.
+- Normalized phone numbers and aligned field mappings across Lawmatics, RingCentral, Airtable, and n8n.
+
+Nexo - Germany (Client)
+Contact: Engineering Manager @ Nexo
+- Supported deployment/setup of an n8n automation server on Railway for a GNews-based content automation project.
+- Built a workflow to fetch articles from GNews.io, process them with OpenAI, store/check records in MongoDB, and publish to WordPress.
+- Tuned GNews fetch volume to avoid quota/rate-limit issues and added duplicate-check handling for MongoDB unique-key errors.
+- Improved WordPress output (HTML structure, layout, SEO formatting, images) and troubleshot 403 publishing errors (credentials, permissions, REST API access, hosting).
+- Created client-ready progress updates covering testing, MongoDB validation, publishing, formatting, and image handling.
 
 Education
 BS Computer Engineering, Cum Laude, GPA 1.89
